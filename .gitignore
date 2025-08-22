@@ -2,8 +2,7 @@
 # Data & Datasets
 # Do not commit large data files. This is the most important rule.
 # =================================================================
-data/
-
+data/amazon-books
 
 # =================================================================
 # Python & Virtual Environments
