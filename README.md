@@ -14,6 +14,37 @@ This repository contains PyTorch implementations of various collaborative filter
 - Hyperparameter search powered by Optuna.
 - Cluster visualization using t-SNE.
 
+## Parameter List (DeepFuzzyCF)
+
+The following command-line arguments can be used to configure the script (`AECLUST.py`).
+
+| Parameter | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| **Execution Mode** | | | |
+| `--search` | flag | `False` | If present, enables hyperparameter search with Optuna instead of a single run. |
+| **Data & Preprocessing** | | | |
+| `--dataset` | string | `ml-100k` | Name of the dataset. Choices: `ml-100k`, `ml-1m`, `amazon-books`, `lastfm`. |
+| `--subset_size` | int | `None` | Number of reviews to load for large datasets like Amazon Books. |
+| `--k_core` | int | `5` | K-core filtering threshold. Removes users/items with fewer interactions. |
+| **Model Architecture** | | | |
+| `--clusters` | int | `15` | The number of user clusters to form. |
+| `--latent_dim` | int | `64` | The dimensionality of the final latent space. Choices: `32`, `64`, `128`. |
+| **Training & Optimization** | | | |
+| `--finetune_epochs` | int | `50` | Maximum number of epochs for the main fine-tuning phase. |
+| `--pretrain_layer_epochs` | int | `10` | Epochs per layer for the greedy layer-wise pretraining. |
+| `--pretrain_global_epochs`| int | `10` | Epochs for the optional global pretraining after layer-wise. |
+| `--batch_size` | int | `256` | Batch size for training and evaluation data loaders. |
+| `--lr` | float | `1e-3` | Learning rate for pretraining. Fine-tuning LR is this value divided by 5. |
+| `--patience` | int | `5` | Number of epochs with no improvement on validation loss to wait before early stopping. |
+| **Regularization & Loss** | | | |
+| `--dropout` | float | `0.5` | Dropout rate applied to the input layer during training. |
+| `--alpha` | float | `1e-5` | Weight for the KL-divergence sparsity regularization loss. |
+| `--rho` | float | `0.05` | The target activation value for the sparsity constraint. |
+| `--gamma` | float | `0.01` | Weight for the clustering loss term during the fine-tuning phase. |
+| **Evaluation & Miscellaneous**| | | |
+| `--neighbors` | int | `50` | Number of neighbors to consider for Top-K recommendation during evaluation. |
+| `--seed` | int | `42` | Random seed for ensuring reproducibility. |
+
 ## Setup Instructions
 
 ### 1. Clone the Repository
