@@ -144,6 +144,8 @@ python vae_ncf.py --dataset ml-100k --latent_dim 64 --lr 5e-4
 
 To run another algorithm, you would first `cd ..` to go back to the root, and then `cd` into its directory.
 
+## Citations
+
 These implementations are inspired by the following papers:
 
 > He, S., Li, T., Duan, Y., Yang, Z., & Li, F. (2019). VAE Based-NCF for Recommendation of Implicit Feedback. *2019 IEEE 8th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)*, 512-516. https://ieeexplore.ieee.org/document/8785761
