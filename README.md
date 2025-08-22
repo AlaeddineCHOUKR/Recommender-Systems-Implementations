@@ -66,22 +66,6 @@ This will install all packages required for all algorithms in the repository.
 pip install -r requirements.txt
 ```
 
-### 4. Download Datasets
-Datasets are shared across all algorithms and must be placed in the top-level `data/` directory.
-
-- **MovieLens 100K / 1M**: Download from the [GroupLens website](https://grouplens.org/datasets/movelens/). Unzip and place the `ml-100k` or `ml-1m` folder inside the `data/` directory.
-- **Last.fm**: Download the "user_artists.dat" file from the [HetRec 2011 dataset](https://grouplens.org/datasets/hetrec-2011/). Create a `data/lastfm` folder and place the file inside.
-- **Amazon Books**: Download the "Books" gzipped JSONL file from the [Amazon Review Data (2018)](https://nijianmo.github.io/amazon/index.html) and place it inside a `data/amazon-books` folder.
-
-Your final `data` directory structure should be:
-```
-Recommender-Systems-Implementations/
-└── data/
-    ├── ml-100k/
-    ├── ml-1m/
-    ...
-```
-
 ## Usage
 
 To run a specific algorithm, navigate into its directory first.
