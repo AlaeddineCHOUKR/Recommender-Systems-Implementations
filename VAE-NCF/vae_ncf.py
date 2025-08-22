@@ -42,7 +42,7 @@ def set_seed(seed: int):
 # ---------------------------
 # Data loading & splitting
 # ---------------------------
-def load_data(dataset_name: str, data_dir: str = "./data", subset_size: int = None, k_core: int = 5):
+def load_data(dataset_name: str, data_dir: str = "../data", subset_size: int = None, k_core: int = 5):
     """
     Returns a single dataframe with columns: user_id, item_id, rating, timestamp
     Remaps ids to contiguous integers.
@@ -443,7 +443,7 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', type=str, default='ml-1m', choices=['ml-100k','ml-1m','amazon-books','lastfm'])
-    parser.add_argument('--data_dir', type=str, default='./data')
+    parser.add_argument('--data_dir', type=str, default='../data')
     parser.add_argument('--subset_size', type=int, default=None)
     parser.add_argument('--k_core', type=int, default=5)
 

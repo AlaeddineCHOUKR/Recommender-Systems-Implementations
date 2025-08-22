@@ -55,7 +55,7 @@ class SparseDataset(Dataset):
         return torch.FloatTensor(user_vector), idx
 
 
-def load_data(dataset_name='ml-100k', data_dir='./', train_ratio=0.8, k_core=5, max_reviews=None, val_ratio=0.1):
+def load_data(dataset_name='ml-100k', data_dir='../data', train_ratio=0.8, k_core=5, max_reviews=None, val_ratio=0.1):
     """
     Loads dataset (ml-100k, ml-1m, amazon-books (jsonl.gz subset), lastfm).
     Performs k-core filtering, remaps user/item ids, performs per-user 80/20 split into train/test,
