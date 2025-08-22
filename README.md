@@ -54,7 +54,7 @@ The following command-line arguments can be used to configure the script (`AECLU
 - Neural Collaborative Filtering (NCF) core to model user-item interactions.
 - Jointly optimized for both reconstruction and recommendation performance.
 - Built for implicit feedback with a pointwise negative sampling strategy.
-- Evaluates both ranking and prediction accuracy (HR/NDCG, MAE/RMSE).
+- Evaluates both ranking and prediction accuracy (HR/NDCG).
 
 ## Parameter List (VAE-NCF)
 
@@ -147,4 +147,5 @@ To run another algorithm, you would first `cd ..` to go back to the root, and th
 These implementations are inspired by the following papers:
 
 > He, S., Li, T., Duan, Y., Yang, Z., & Li, F. (2019). VAE Based-NCF for Recommendation of Implicit Feedback. *2019 IEEE 8th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)*, 512-516. https://ieeexplore.ieee.org/document/8785761
+
 >Adel,B. (2022) Deep Embedded Fuzzy Clustering Model for Collaborative Filtering Recommender System Intelligent Automation & Soft Computing 2022, 33(1), 501-513. https://doi.org/10.32604/iasc.2022.022239
